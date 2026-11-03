@@ -850,7 +850,7 @@ pub struct SpSubscribe {
 
 #[cfg(feature = "frigate")]
 impl Request for SpSubscribe {
-    type Response = String;
+    type Response = crate::response::SpSubscribeResp;
 
     fn to_method_and_params(&self) -> MethodAndParams {
         let mut params = vec![
